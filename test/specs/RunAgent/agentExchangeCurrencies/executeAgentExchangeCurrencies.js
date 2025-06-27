@@ -17,6 +17,7 @@ describe('Login-Agent', async() => {
     await preparationAgentExchangeCurrencies.AgentExchangeCurrencies('Sale')
     
        await agentDashboard.logout()
+       
     })
 })
     
