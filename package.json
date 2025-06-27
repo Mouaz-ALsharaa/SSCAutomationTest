@@ -1,0 +1,64 @@
+{
+  "name": "my-new-project",
+  "type": "module",
+  "devDependencies": {
+    "@gmangiapelo/wdio-azure-devops-service": "^0.0.11",
+    "@types/node": "^20.3.1",
+    "@wdio/allure-reporter": "^8.11.0",
+    "@wdio/cli": "^8.11.2",
+    "@wdio/firefox-profile-service": "^8.36.1",
+    "@wdio/local-runner": "^8.11.2",
+    "@wdio/mocha-framework": "^8.11.0",
+    "@wdio/spec-reporter": "^8.11.2",
+    "chromedriver": "^114.0.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-intercept-service": "^4.4.0",
+    "wdio-ms-teams-service": "^0.1.9"
+  },
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "loginAgent": "npx wdio run wdio.conf.js --suite loginAgent",
+    "SendRemAgent": "npx wdio run wdio.conf.js --suite sendRemAgent",
+    "Agent": "npx wdio run wdio.conf.js --suite loginAgent && npx wdio run wdio.conf.js --suite sendRemAgent && npx wdio run wdio.conf.js --suite Approve && npx wdio run wdio.conf.js --suite PayRem && npx wdio run wdio.conf.js --suite Credits && npx wdio run wdio.conf.js --suite Exchange ",
+    "Agent-Login-Credits": "npx wdio run wdio.conf.js --suite loginAgent &&npx wdio run wdio.conf.js --suite Credits",
+    "Agentwithoutlogin": "npx wdio run wdio.conf.js --suite sendRemAgent && npx wdio run wdio.conf.js --suite Approve && npx wdio run wdio.conf.js --suite PayRem && npx wdio run wdio.conf.js --suite Credits ",
+    "AgentSendPay": "npx wdio run wdio.conf.js --suite sendRemAgent && npx wdio run wdio.conf.js --suite Approve && npx wdio run wdio.conf.js --suite PayRem",
+    "PayRem": "npx wdio run wdio.conf.js --suite PayRem",
+    "Credits": "npx wdio run wdio.conf.js --suite Credits",
+    "Exchange": "npx wdio run wdio.conf.js --suite Exchange",
+    "Approve": "npx wdio run wdio.conf.js --suite Approve",
+
+
+    "GenRep": "allure generate allure-results --clean",
+    "openAllur": "allure open",
+
+    
+    "loginUser": "npx wdio run wdio.conf.js --suite loginUser",
+    "AccountOperationUser": "npx wdio run wdio.conf.js --suite AccountOperationUser",
+    "AccountListAddTeller": "npx wdio run wdio.conf.js --suite AccountListAddTeller",
+    "AccountCard": "npx wdio run wdio.conf.js --suite AccountCard",
+    "AccountCardcopy": "npx wdio run wdio.conf.js --suite AccountCardcopy",
+    "AccountCardcopy2": "npx wdio run wdio.conf.js --suite AccountCardcopy2",
+    "ManagementUsers": "npx wdio run wdio.conf.js --suite ManagementUsers",
+    "IncomingRemittanceUser": "npx wdio run wdio.conf.js --suite IncomingRemittanceUser",
+    "RemittanceSendUser": "npx wdio run wdio.conf.js --suite RemittanceSendUser",
+    "PayRemUser": "npx wdio run wdio.conf.js --suite PayRemUser",
+    "RemOutwardUser": "npx wdio run wdio.conf.js --suite RemOutwardUser",
+    "UserSendPaay": "npx wdio run wdio.conf.js --suite RemittanceSendUser && npx wdio run wdio.conf.js --suite PayRemUser"
+
+  },
+  "dependencies": {
+    "chai": "^4.3.10",
+    "encrypt-rsa": "^2.1.5",
+    "fs": "^0.0.1-security",
+    "fs-js": "^1.0.6",
+    "node-rsa": "^1.1.1",
+    "path": "^0.12.7",
+    "public-encrypt": "^4.0.3",
+    "unique-names-generator": "^4.7.1",
+    "wdio-electron-service": "^4.3.0"
+  }
+}
