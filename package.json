@@ -10,7 +10,7 @@
     "@wdio/local-runner": "^8.11.2",
     "@wdio/mocha-framework": "^8.11.0",
     "@wdio/spec-reporter": "^8.11.2",
-    "chromedriver": "^114.0.3",
+    "chromedriver": "^137.0.4",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "wdio-chromedriver-service": "^8.1.1",
@@ -18,7 +18,6 @@
     "wdio-ms-teams-service": "^0.1.9"
   },
   "scripts": {
-
     "test": "echo \"Error: no test specified\" && exit 1",
     "loginAgent": "npx wdio run wdio.conf.js --suite loginAgent",
     "SendRemAgent": "npx wdio run wdio.conf.js --suite sendRemAgent",
@@ -30,12 +29,8 @@
     "Credits": "npx wdio run wdio.conf.js --suite Credits",
     "Exchange": "npx wdio run wdio.conf.js --suite Exchange",
     "Approve": "npx wdio run wdio.conf.js --suite Approve",
-
-
     "GenRep": "allure generate allure-results --clean",
     "openAllur": "allure open",
-
-    
     "loginUser": "npx wdio run wdio.conf.js --suite loginUser",
     "AccountOperationUser": "npx wdio run wdio.conf.js --suite AccountOperationUser",
     "AccountListAddTeller": "npx wdio run wdio.conf.js --suite AccountListAddTeller",
@@ -48,7 +43,6 @@
     "PayRemUser": "npx wdio run wdio.conf.js --suite PayRemUser",
     "RemOutwardUser": "npx wdio run wdio.conf.js --suite RemOutwardUser",
     "UserSendPaay": "npx wdio run wdio.conf.js --suite RemittanceSendUser && npx wdio run wdio.conf.js --suite PayRemUser"
-
   },
   "dependencies": {
     "chai": "^4.3.10",

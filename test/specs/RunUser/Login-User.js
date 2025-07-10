@@ -15,24 +15,19 @@ describe('Login-User', async() => {
     }
 
     it('User-login-Admin', async() => {
-        await browser.pause(2000)
         await LoginPage.loginUser(options.userAdmin,options.PasswordAdmin)
-        await browser.pause(500)
         await agentDashboard.logout()
     }),
     it('User-login-Admin-PasswordError', async() => {
-        await browser.pause(2000)
+
         const PasswordError = await componant.getrequestbyurl('/Login/LogIn', async function () {  await LoginPage.loginUser(options.userAdmin,options.PasswordAdminError) })
         expectChai(PasswordError.response.body.Code).to.equal("PasswordError")
         await loginPage.btnClose.click()
-        await browser.pause(500)
     }),
     it('User-login-Admin-sucess-with-error-try', async() => {
-        await browser.pause(2000)
         const PasswordError = await componant.getrequestbyurl('/Login/LogIn', async function () {  await LoginPage.loginUser(options.userAdmin,options.PasswordAdmin) })
         expectChai(PasswordError.response.body.Code).to.equal("SuccessWithSomePreviousErroneousAttempts")
         await loginPage.btnClose.click()
-        await browser.pause(500)
         await agentDashboard.logout()
     })
 
