@@ -7,11 +7,9 @@ import componant from '../../pageobjects/componant/componant.js'
 describe('Login-User', async() => {
     var options={
         userAdmin:"admin",
-        userNameError:"memoooo",
         PasswordAdmin:"Admin@2023",
         PasswordAdminError:"Admin@2022",
-        email:"mouaz@salahsoft.com",
-        WrongEmail:"eeerr@sssss.com"
+
     }
 
     it('User-login-Admin', async() => {
