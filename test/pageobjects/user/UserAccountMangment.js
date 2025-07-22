@@ -46,7 +46,8 @@ class UserAccountMangment{
    
 
     async AddAccCheck (ChekNum) {
-        return  $("(//input[contains(@name,'chk')])"+"["+ChekNum+"]")
+     
+        return  $("(//input[@type='checkbox'])"+"["+ChekNum+"]")
     }
 
 
