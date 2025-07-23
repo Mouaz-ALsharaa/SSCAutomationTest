@@ -34,6 +34,7 @@
     "loginUser": "npx wdio run wdio.conf.js --suite loginUser",
     "AccountOperationUser": "npx wdio run wdio.conf.js --suite AccountOperationUser",
     "AccountListAddTeller": "npx wdio run wdio.conf.js --suite AccountListAddTeller",
+    "Teller": "npx wdio run wdio.conf.js --suite Teller",
     "AccountCard": "npx wdio run wdio.conf.js --suite AccountCard",
     "AccountCardcopy": "npx wdio run wdio.conf.js --suite AccountCardcopy",
     "AccountCardcopy2": "npx wdio run wdio.conf.js --suite AccountCardcopy2",
