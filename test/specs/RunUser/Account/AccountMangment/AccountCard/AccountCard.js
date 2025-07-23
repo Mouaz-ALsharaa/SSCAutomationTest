@@ -1,13 +1,13 @@
 import { expect as expectChai } from 'chai'
-import LoginPage from '../../../../pageobjects/login.page.js'
-import agentDashboard from '../../../../pageobjects/agent/agentDashboard.js'
-import UserDashboard from '../../../../pageobjects/user/UserDashboard.js'
-import componant from '../../../../pageobjects/componant/componant.js'
-import UserRemittanceOperation from '../../../../pageobjects/user/UserRemittanceOperation.js'
+import LoginPage from '../../../../../pageobjects/login.page.js'
+import agentDashboard from '../../../../../pageobjects/agent/agentDashboard.js'
+import UserDashboard from '../../../../../pageobjects/user/UserDashboard.js'
+import componant from '../../../../../pageobjects/componant/componant.js'
+import UserRemittanceOperation from '../../../../../pageobjects/user/UserRemittanceOperation.js'
 import { Key } from 'webdriverio'
 //import UserMangment from '../../../../pageobjects/user/UserMangment.js'
 //import UserAddTeller from '../../../../pageobjects/user/UserAddTeller.js'
-import UserAccountMangment from '../../../../pageobjects/user/UserAccountMangment.js'
+import UserAccountMangment from '../../../../../pageobjects/user/UserAccountMangment.js'
 
 describe('AccountCard', async() => {
     var options={

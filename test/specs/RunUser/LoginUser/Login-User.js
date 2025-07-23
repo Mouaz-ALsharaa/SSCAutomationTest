@@ -1,8 +1,8 @@
 import { expect as expectChai } from 'chai'
-import LoginPage from '../../pageobjects/login.page.js'
-import agentDashboard from '../../pageobjects/agent/agentDashboard.js'
-import loginPage from '../../pageobjects/login.page.js'
-import componant from '../../pageobjects/componant/componant.js'
+import LoginPage from '../../../pageobjects/login.page.js'
+import agentDashboard from '../../../pageobjects/agent/agentDashboard.js'
+import loginPage from '../../../pageobjects/login.page.js'
+import componant from '../../../pageobjects/componant/componant.js'
 
 describe('Login-User', async() => {
     var options={

@@ -1,4 +1,3 @@
-import { expect as expectChai } from 'chai'
 import UserDashboard from '../../../../../pageobjects/user/UserDashboard.js'
 import UserAccountMangment from '../../../../../pageobjects/user/UserAccountMangment.js'
 
