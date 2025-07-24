@@ -2,7 +2,7 @@ import UserDashboard from '../../../../../pageobjects/user/UserDashboard.js'
 import UserAccountMangment from '../../../../../pageobjects/user/UserAccountMangment.js'
 
 class preparationAccountList {
-    async AccountList (TellerNum){
+    async AccountListTeller (TellerNum){
               await UserDashboard.btnAccounts.click()     
                 await UserDashboard.btnAccountManagement.click()      
                 await UserDashboard.btnAccountsList.click()
@@ -29,6 +29,28 @@ class preparationAccountList {
                  }
                  await UserAccountMangment.btnSave.click()
                  await UserAccountMangment.btnOk.click()
+    }
+
+
+
+    async addAccoutToAccountList(Name,firstLevel, secondLevel , curranceCount) {
+        await UserDashboard.btnAccounts.click()
+        await UserDashboard.btnAccountManagement.click()
+        await UserDashboard.btnAccountsList.click()
+        const AccfirstLevel= await UserAccountMangment.AccountTree(firstLevel)
+        AccfirstLevel.click()
+        const AccsecondLevel= await UserAccountMangment.AccountTree(secondLevel)
+        AccsecondLevel.click()
+        await UserAccountMangment.AddAgentAccount.click()
+        await UserAccountMangment.inptAccName.setValue(Name)
+         for (let i=0; i<=curranceCount; ++i ){
+                   const currance =await UserAccountMangment.AddAccCheck(i)
+                   currance.click()
+                 }
+         
+            await UserAccountMangment.btnSave.click()
+
+            await UserAccountMangment.btnOk.click()
     }
 }
 export default new preparationAccountList()

@@ -43,6 +43,7 @@ describe('AccountCard', async() => {
         await browser.pause(2000)
          var AccountName =await componant.generateNumber(3)
          var AccountName1 =await componant.generateNumber(2)
+         
         const Acc10= await UserAccountMangment.AccountTree(14)
         Acc10.click()
         await browser.pause(500)

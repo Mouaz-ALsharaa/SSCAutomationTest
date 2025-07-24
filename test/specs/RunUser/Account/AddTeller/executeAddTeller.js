@@ -11,18 +11,19 @@ describe('AccountOperation', async() => {
             TellerNum :await appServices.generateNumber(3),
              TellerNum1 :await appServices.generateNumber(3)
     }
-    //--------------اضافة صندوق ------------------------
+    //-------------- عمليات اضافة صندوق ------------------------
 
    it('Add-Teller-Sucess-read-delete-edit', async() => {
       await LoginPage.loginUser(options.userAdmin,options.PasswordAdmin)
-            await preparationAccountList.AccountList(options.TellerNum)
+            await preparationAccountList.AccountListTeller(options.TellerNum)
 
             await preparationAddTeller.operationsTeller(options.TellerNum)
         
     }),
+      //--------------اضافة صندوق بنجاح------------------------
     it('Add-Teller-Sucess', async() => {
 
-       await preparationAccountList.AccountList(options.TellerNum1)
+       await preparationAccountList.AccountListTeller(options.TellerNum1)
       await preparationAddTeller.addTeller(options.TellerNum1)
         await agentDashboard.logout()
         

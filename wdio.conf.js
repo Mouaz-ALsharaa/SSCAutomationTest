@@ -23,9 +23,9 @@ runner: 'local',
 
         AccountOperationUser:['test/specs/RunUser/Account/OperationsDaily/executeAccountOperationUser.js'],
 
-        AccountListAddTeller:['test/specs/RunUser/Account/AccountMangment/AccountList/AccountList-AddTeller.js'],
+        AccountList:['test/specs/RunUser/Account/AccountMangment/AccountList/executeAccountList.js'],
 
-        Teller:['test/specs/RunUser/Account/AddTeller/AddTeller.js'],
+        Teller:['test/specs/RunUser/Account/AddTeller/executeAddTeller.js'],
 
         AccountCard:['test/specs/RunUser/Account/AccountMangment/AccountCard.js'],
 

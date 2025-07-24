@@ -14,9 +14,9 @@ describe('AccountOperation', async() => {
     //-------------- دليل الحسابات-وكوة ------------------------
    it('AccountList-', async() => {
         await LoginPage.loginUser(options.userAdmin,options.PasswordAdmin)
-        await preparationAccountList.AccountList(options.TellerNum)
-//-----------------اضافة الكوة --------------------------
-  await preparationAddTeller.addTeller(options.TellerNum)
+        
+        await preparationAccountList.addAccoutToAccountList("tessst",14,141,2)
+
         await agentDashboard.logout()
         
     })
